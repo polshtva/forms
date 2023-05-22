@@ -9,29 +9,35 @@
 </head>
 
 <body>
-
-    <!-- Регистрация -->
-    <form action="" method="post">
-        <h3>Форма регистрации</h3>
-        <p>Введите логин: <input type="text" placeholder="логин" maxlength="10" name="login"></p>
-        <p>Введите пароль: <input type="password" placeholder="пароль" maxlength="10" name="password"></p>
-        <p>
-        <h3>Мои интересы:</h3>
+    <fieldset><!-- Регистрация -->
+        <legend>
+            <h3>Форма регистрации</h3>
+        </legend>
+        <form action="" method="get">
+            <p>Введите логин: <input type="email" placeholder="логин" maxlength="10" name="login" required></p>
+            <p>Введите пароль: <input type="password" placeholder="пароль" maxlength="20" minlength="8" name="password"
+                    required></p>
+    </fieldset>
+    <fieldset>
+        <legend>
+            <h3>Мои интересы:</h3>
+        </legend>
         <label for="sport">
             <input type="checkbox" name="interes" id="sport">Спорт
         </label> <br>
         <label for="prog">
-            <input type="checkbox" name="interes" id="prog">Программирование
+            <input type="checkbox" name="interes" id="prog" checked disabled>Программирование
         </label> <br>
         <label for="friends">
             <input type="checkbox" name="interes" id="friends">Проводить время с друзьями
         </label>
-        </p>
+    </fieldset>
 
-
-        <!-- Radio-button -->
-        <p>
-        <h3>Род деятельности</h3>
+    <!-- Radio-button -->
+    <fieldset>
+        <legend>
+            <h3>Род деятельности</h3>
+        </legend>
         <label>
             <input type="radio" name="work" id=""> Не работаю
         </label> <br>
@@ -41,13 +47,16 @@
         <label>
             <input type="radio" name="work" id=""> Учусь
         </label>
-        </p>
+    </fieldset>
 
 
-        <!-- Выпадающий список  -->
-        <h3>Город</h3>
+    <!-- Выпадающий список  -->
+    <fieldset>
+        <legend>
+            <h3>Город</h3>
+        </legend>
         <select name="cityes" id="">
-            <option value="city" style="background-color: grey">Выберите город:</option>
+            <option value="city" style="background-color: grey" disabled selected>Выберите город:</option>
             <option value="Moscow">Москва</option>
             <optgroup label="Тюмень">
                 <option value="east">Восточный</option>
@@ -56,16 +65,17 @@
             </optgroup>
             <option value="Surgut">Сургут</option>
         </select>
+    </fieldset>
 
 
-        <!-- Комментарии -->
-        <P><textarea name="" id="" cols="30" rows="10" placeholder="Здесь можно оставить комментарий"></textarea></P>
+    <!-- Комментарии -->
+    <P><textarea name="" id="" cols="30" rows="10" placeholder="Здесь можно оставить комментарий"></textarea></P>
 
-        <!-- Кнока -->
+    <!-- Кнока -->
 
-        <!-- <input type="submit" value="Отправить"> -->
-        <button type="submit">Отпрваить</button>
-        <button type="reset">Очистить</button>
+    <!-- <input type="submit" value="Отправить"> -->
+    <input type="submit" value="Отправить">
+    <button type="reset">Очистить</button>
 
     </form>
 
